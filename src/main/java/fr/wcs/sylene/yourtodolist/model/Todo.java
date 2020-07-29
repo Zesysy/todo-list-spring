@@ -10,7 +10,6 @@ import java.util.UUID;
 public class Todo {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Type(type = "uuid-char")
     private UUID uuid;
 
