@@ -40,7 +40,7 @@
                 <div class="card my-4 card-custom">
                     <h5 class="card-header header-custom">Here are your Todos</h5>
                     <div class="card-body text-center" th:each="todos : ${todos}">
-                        <p class="mt-1" th:text="${todos.content}">Content</p>
+                        <p class="mt-1" th:text="${todos.todoDate} + ' -> ' + ${todos.content}">Content</p>
                         <span class="justify-content-center">
                             <a th:href="@{/delete/{id}(id = ${todos.id})}" class="btn" style="color: inherit;"><i
                                     class='fas fa-trash-alt'></i></a>
