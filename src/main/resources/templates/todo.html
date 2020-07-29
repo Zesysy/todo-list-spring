@@ -17,22 +17,37 @@
     <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"
         th:href="@{/vendor/bootstrap/css/bootstrap.min.css}">
 
+    <!-- Custom CSS -->
+    <link href="../static/css/footer.css" rel="stylesheet" th:href="@{/css/footer.css}">
+    <link href="../static/css/header.css" rel="stylesheet" th:href="@{/css/header.css}">
+    <link href="../static/css/index.css" rel="stylesheet" th:href="@{/css/index.css}">
+    <link href="../static/css/todo.css" rel="stylesheet" th:href="@{/css/todo.css}">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"
+        th:href="@{/vendor/bootstrap/css/bootstrap.min.css}">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
+    <header th:replace="fragments/header.html :: top">
+    </header>
+
+    <main class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-12">
+            <div class="text-center" style="min-width: 600px;">
                 <h3>What do you want to do ?</h3>
                 <div class="card my-4 card-custom">
-                    <h5 class="card-header header-custom">Your data</h5>
+                    <h5 class="card-header header-custom">Create a new Todo</h5>
                     <div class="card-body">
                         <form method="post" th:action="@{/todo}" th:object="${todo}">
                             <input th:value="${todo.id}" th:name="id" name="id" type="hidden">
                             <div class="form-group ">
                                 <div class="form-row mb-3">
-                                    <div class="col-2">
-                                        <label for="content">Todo:</label>
+                                    <div class="col-2 mt-2">
+                                        <label for="content">Todo</label>
                                     </div>
                                     <div class="col">
                                         <input class="form-control" th:value="${todo.content}" th:name="content"
@@ -48,8 +63,10 @@
                 </div>
             </div>
         </div>
-    </div>
-    <a href="/">Go home</a>
+    </main>
+
+    <footer th:replace="fragments/footer.html :: bottom">
+    </footer>
 
     <!-- Bootstrap core JavaScript -->
     <script src="../static/vendor/jquery/jquery.min.js" th:src="@{/vendor/jquery/jquery.min.js}"></script>
