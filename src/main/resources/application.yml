@@ -1,5 +1,7 @@
 spring:
 
+  main.allow-bean-definition-overriding: true
+
   output.ansi.enabled: ALWAYS
 
   datasource:
@@ -11,3 +13,4 @@ spring:
     show-sql: true
 
     hibernate.ddl-auto: update
+

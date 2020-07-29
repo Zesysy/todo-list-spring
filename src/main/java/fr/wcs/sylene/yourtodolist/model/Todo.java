@@ -13,6 +13,10 @@ public class Todo {
     @Column(name = "content")
     private String content;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_user", nullable = false)
+    AppUser user;
+
     public Long getId() {
         return this.id;
     }
@@ -27,6 +31,14 @@ public class Todo {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public AppUser getUser() {
+        return this.user;
+    }
+
+    public void setUser(AppUser user) {
+        this.user = user;
     }
 
 }

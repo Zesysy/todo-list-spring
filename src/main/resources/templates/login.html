@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
@@ -13,6 +13,7 @@
     <link rel="shortcut icon" type="img/favicon.ico"
         th:href="@{https://invexdesign.com/blog/wp-content/themes/invex/images/invex-v-white.png}" />
 
+
     <!-- Custom CSS -->
     <link href="../static/css/footer.css" rel="stylesheet" th:href="@{/css/footer.css}" type="text/css">
     <link href="../static/css/header.css" rel="stylesheet" th:href="@{/css/header.css}" type="text/css">
@@ -25,29 +26,37 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
 
-
 </head>
 
 <body>
     <header th:replace="fragments/header.html :: top">
     </header>
 
-    <main class="container">
-        <div class="justify-content-center">
-            <h3 class="mb-4">Error 400: bad request</h3>
-            <h3>Please enter content in your todo</h3>
-        </div>
+    <main>
+        <form th:action="@{/login}" method="post">
+            <fieldset>
+                <div>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="username" required="required"
+                        autofocus="autofocus" />
+                </div>
+
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="password" required="required" />
+                </div>
+
+                <div>
+                    <input type="submit" value="Log in" />
+                </div>
+
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+            </fieldset>
+        </form>
     </main>
-
-    <footer th:replace="fragments/footer.html :: bottom">
-    </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="../static/vendor/jquery/jquery.min.js" th:src="@{/vendor/jquery/jquery.min.js}"></script>
-    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"
-        th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js }"></script>
-    <!-- Fontawsome -->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
+
+<footer th:replace="fragments/footer.html :: bottom">
+</footer>
 
 </html>

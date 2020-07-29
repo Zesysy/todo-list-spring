@@ -5,9 +5,13 @@
         <ol class="breadcrumb float-right col-7 breadcrumb-custom">
             <li class="breadcrumb-item breadcrumb-custom ml-auto"><a href="/">Home</a></li>
             <li class="breadcrumb-item breadcrumb-custom"><a href="/todos">Your Todos</a></li>
+            <li>
+                <form th:action="@{/logout}" method="post">
+                    <input type="submit" value="Logout" />
+                </form>
+            </li>
         </ol>
-        </div>
-        </div>
+
     </nav>
 
 </header>
