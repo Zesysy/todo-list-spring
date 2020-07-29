@@ -26,6 +26,7 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
 
+
 </head>
 
 <body>
@@ -33,25 +34,10 @@
     </header>
 
     <main class="container">
-        <div class="row justify-content-center">
-            <div class="text-center" style="min-width: 600px;">
-                <a href="/todo" class="btn mb-4" style="color: inherit;"><i class="fas fa-plus"></i> Add a
-                    Todo</a>
-                <div class="card my-4 card-custom">
-                    <h5 class="card-header header-custom">Here are your Todos</h5>
-                    <div class="card-body text-center" th:each="todos : ${todos}">
-                        <p class="mt-1" th:text="${todos.content}">Content</p>
-                        <span class="justify-content-center">
-                            <a th:href="@{/delete/{id}(id = ${todos.id})}" class="btn" style="color: inherit;"><i
-                                    class='fas fa-trash-alt'></i></a>
-                            <a th:href="@{/todo/{id}(id = ${todos.id})}" class="btn" style="color: inherit;"><i
-                                    class='fas fa-pencil-alt'></i></a>
-                        </span>
-                    </div>
-                </div>
-            </div>
+        <div class="justify-content-center">
+            <h3 class="mb-4">Error 400: bad request</h3>
+            <h3>Please enter content in your todo</h3>
         </div>
-
     </main>
 
     <footer th:replace="fragments/footer.html :: bottom">

@@ -3,12 +3,14 @@ package fr.wcs.sylene.yourtodolist.controller;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.server.ResponseStatusException;
 
 import fr.wcs.sylene.yourtodolist.model.Todo;
 import fr.wcs.sylene.yourtodolist.repository.TodoRepository;
@@ -37,6 +39,10 @@ public class TodoController {
 
     @PostMapping("/todo")
     public String postTodo(@ModelAttribute Todo todo) {
+
+        if (todo.getContent() == null || todo.getContent().isEmpty()) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "error.html");
+        }
 
         todoRepository.save(todo);
 
