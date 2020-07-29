@@ -32,14 +32,14 @@ git@github.com:Zesysy/todo-list-spring.git
 ## Folder Hierarchy
 
 -  `/src/main/java/com/wcs_ftm/followthemap` : 
-		- `/config`: Contains the application configuration which calls the elements in application.yml to connect with database
-		- `/controller`: One for the API and a TodoController
-		- `/model`
-		- `/repository`: Extends Jpa Repository
+	- `/config`: Contains the application configuration which calls the elements in application.yml to connect with database
+	- `/controller`: One for the API and a TodoController
+	- `/model`
+	- `/repository`: Extends Jpa Repository
 - `/src/main/java/com/wcs_ftm/resources`:
-		- `/static`: Contains the CSS of the application and the Boostrap template
-		- `/templates`: Contains our Html pages 
-		- `application.yml`: Url and other elements of our database
+	- `/static`: Contains the CSS of the application and the Boostrap template
+	- `/templates`: Contains our Html pages 
+	- `application.yml`: Url and other elements of our database
 
 
 ## Standards
