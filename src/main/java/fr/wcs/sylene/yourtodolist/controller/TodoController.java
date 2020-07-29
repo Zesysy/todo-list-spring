@@ -1,5 +1,7 @@
 package fr.wcs.sylene.yourtodolist.controller;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,7 +20,10 @@ public class TodoController {
     TodoRepository todoRepository;
 
     @GetMapping("/todo")
-    public String getTodoPage() {
+    public String getTodoPage(Model model) {
+
+        Todo todo = new Todo();
+        model.addAttribute("todo", todo);
 
         return "todo";
     }
@@ -36,6 +41,23 @@ public class TodoController {
         todoRepository.save(todo);
 
         return "redirect:/todos";
+    }
+
+    @GetMapping("/todo/{id}")
+    public String getOneTodoToUpdate(Model model, @PathVariable Long id) {
+
+        Todo todo = new Todo();
+
+        if (id != null) {
+            Optional<Todo> optionalTodo = todoRepository.findById(id);
+            if (optionalTodo.isPresent()) {
+                todo = optionalTodo.get();
+            }
+        }
+
+        model.addAttribute("todo", todo);
+
+        return "todo";
     }
 
     @GetMapping("/delete/{id}")
