@@ -38,4 +38,12 @@ public class TodoController {
         return "redirect:/todos";
     }
 
+    @GetMapping("/delete/{id}")
+    public String deleteConfigMap(@PathVariable Long id) {
+
+        todoRepository.deleteById(id);
+
+        return "redirect:/todos";
+    }
+
 }

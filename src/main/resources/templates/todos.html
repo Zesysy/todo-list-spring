@@ -26,13 +26,18 @@
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">Todo</th>
-                        <th scope="col">Update or Delete your todo</th>
+                        <th scope="col"> </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr th:each="todos : ${todos}">
                         <td th:text="${todos.content}">Content</td>
-                        <td>Update & Delete</td>
+                        <td>
+                            <a th:href="@{/delete/{id}(id = ${todos.id})}" class="btn mr-3 mt-4 float-right"
+                                style="color: inherit;"><i class='fas fa-trash-alt'></i></a>
+                            <a th:href="@{/todo/{id}(id = ${todos.id})}" class="btn mr-3 mt-4 float-right"
+                                style="color: inherit;"><i class='fas fa-pencil-alt'></i></a>
+                        </td>
                     </tr>
 
                 </tbody>
@@ -45,7 +50,8 @@
     <script src="../static/vendor/jquery/jquery.min.js" th:src="@{/vendor/jquery/jquery.min.js}"></script>
     <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"
         th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js }"></script>
-
+    <!-- Fontawsome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 
 </html>
