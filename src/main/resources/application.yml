@@ -1,0 +1,10 @@
+spring:
+  profiles: default
+
+server:
+  port: 8080
+
+mysql:
+  url: "jdbc:mysql://localhost:3306/todo_list_spring?serverTimezone=GMT"
+  username: sylene
+  password: my-db64B
