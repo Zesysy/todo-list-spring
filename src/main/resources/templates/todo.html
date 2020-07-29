@@ -1,0 +1,60 @@
+<!doctype html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Your Todo List</title>
+    <meta name="description"
+        content="End of training, with the last project at WCS school, in order to mobilize the knowledge aquired during the session">
+    <meta name="author" content="Sylène Manusset">
+
+    <link rel="shortcut icon" type="img/favicon.ico"
+        th:href="@{https://invexdesign.com/blog/wp-content/themes/invex/images/invex-v-white.png}" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"
+        th:href="@{/vendor/bootstrap/css/bootstrap.min.css}">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <h3>What do you want to do ?</h3>
+                <div class="card my-4 card-custom">
+                    <h5 class="card-header header-custom">Your data</h5>
+                    <div class="card-body">
+                        <form method="post" th:action="@{/todo}">
+                            <div class="form-group ">
+                                <div class="form-row mb-3">
+                                    <div class="col-2">
+                                        <label for="content">Todo:</label>
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-control" th:value="${content}" th:name="content"
+                                            th:id="content" id="content" name="content"
+                                            placeholder="Give me a present <3" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn button-custom float-right" id="buttonSubmit">Submit
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="/">Go home</a>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../static/vendor/jquery/jquery.min.js" th:src="@{/vendor/jquery/jquery.min.js}"></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"
+        th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js }"></script>
+
+</body>
+
+</html>

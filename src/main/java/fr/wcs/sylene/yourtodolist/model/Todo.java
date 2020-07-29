@@ -1,27 +1,24 @@
 package fr.wcs.sylene.yourtodolist.model;
 
-import org.hibernate.annotations.Type;
-
 import javax.persistence.*;
-import java.util.UUID;
 
 @Entity
 @Table(name = "todo")
 public class Todo {
 
     @Id
-    @Type(type = "uuid-char")
-    private UUID uuid;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(name = "content")
     private String content;
 
-    public UUID getUuid() {
-        return uuid;
+    public Long getId() {
+        return this.id;
     }
 
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getContent() {
