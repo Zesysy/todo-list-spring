@@ -1,0 +1,51 @@
+<!doctype html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Your Todo List</title>
+    <meta name="description"
+        content="End of training, with the last project at WCS school, in order to mobilize the knowledge aquired during the session">
+    <meta name="author" content="Sylène Manusset">
+
+    <link rel="shortcut icon" type="img/favicon.ico"
+        th:href="@{https://invexdesign.com/blog/wp-content/themes/invex/images/invex-v-white.png}" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"
+        th:href="@{/vendor/bootstrap/css/bootstrap.min.css}">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Todo</th>
+                        <th scope="col">Update or Delete your todo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="todos : ${todos}">
+                        <td th:text="${todos.content}">Content</td>
+                        <td>Update & Delete</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <a href="/">Go home</a>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../static/vendor/jquery/jquery.min.js" th:src="@{/vendor/jquery/jquery.min.js}"></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"
+        th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js }"></script>
+
+</body>
+
+</html>

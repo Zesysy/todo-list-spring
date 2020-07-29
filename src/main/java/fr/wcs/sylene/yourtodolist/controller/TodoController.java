@@ -2,8 +2,10 @@ package fr.wcs.sylene.yourtodolist.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import fr.wcs.sylene.yourtodolist.model.Todo;
@@ -16,10 +18,16 @@ public class TodoController {
     TodoRepository todoRepository;
 
     @GetMapping("/todo")
-    public String getTodo() {
+    public String getTodoPage() {
 
         return "todo";
+    }
 
+    @GetMapping("/todos")
+    public String getAllTodos(Model model) {
+
+        model.addAttribute("todos", todoRepository.findAll());
+        return "todos";
     }
 
     @PostMapping("/todo")
@@ -27,7 +35,7 @@ public class TodoController {
 
         todoRepository.save(todo);
 
-        return "redirect:/";
+        return "redirect:/todos";
     }
 
 }
