@@ -1,0 +1,58 @@
+<!doctype html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Your Todo List</title>
+    <meta name="description"
+        content="End of training, with the last project at WCS school, in order to mobilize the knowledge aquired during the session">
+    <meta name="author" content="Sylène Manusset">
+
+    <link rel="shortcut icon" type="img/favicon.ico"
+        th:href="@{https://invexdesign.com/blog/wp-content/themes/invex/images/invex-v-white.png}" />
+
+
+    <!-- Custom CSS -->
+    <link href="../static/css/footer.css" rel="stylesheet" th:href="@{/css/footer.css}">
+    <link href="../static/css/header.css" rel="stylesheet" th:href="@{/css/header.css}">
+    <link href="../static/css/index.css" rel="stylesheet" th:href="@{/css/index.css}">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"
+        th:href="@{/vendor/bootstrap/css/bootstrap.min.css}">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header th:replace="fragments/header.html :: top">
+    </header>
+
+    <main class="container">
+        <div class="row justify-content-center mt-4">
+            <div class="col-lg-12">
+                <h1>Hello World !</h1>
+                <p>Welcome to final project at WILD CODE SCHOOL</p>
+                <p>Follow me here -> <a href="https://github.com/Zesysy"><i class="fab fa-github-alt fa-2x"></i></a>
+                    <a href="https://www.linkedin.com/in/sylene-manusset/"><i class="fab fa-linkedin-in fa-2x"></i></a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer th:replace="fragments/footer.html :: bottom">
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../static/vendor/jquery/jquery.min.js" th:src="@{/vendor/jquery/jquery.min.js}"></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"
+        th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js }"></script>
+    <!-- Fontawsome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+
+</html>

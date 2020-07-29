@@ -1,0 +1,13 @@
+spring:
+
+  output.ansi.enabled: ALWAYS
+
+  datasource:
+    url: "jdbc:mysql://localhost:3306/todo_list_spring?serverTimezone=GMT"
+    username: sylene
+    password: my-db64B
+
+  jpa:
+    show-sql: true
+
+    hibernate.ddl-auto: update

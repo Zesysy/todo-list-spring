@@ -1,0 +1,27 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #143642 !important;
+  font-family: 'Roboto Mono', monospace !important;
+  font-weight: bold;
+}
+
+main h1, p, main a, h3 {
+    color: #558c8c !important;
+    text-align: center;
+}
+
+main a:hover{
+    color: #d9fff5 !important;
+}
+
+.container {
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

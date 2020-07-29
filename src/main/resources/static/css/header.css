@@ -1,0 +1,19 @@
+header h2 {
+  color: #bcb6ff;
+
+}
+
+.breadcrumb-custom {
+  background-color: #143642 !important;
+  color: #bcb6ff;
+  font-size: 1.3rem;
+}
+
+.breadcrumb-custom a {
+  background-color: #143642;
+  color: #bcb6ff;
+}
+
+.breadcrumb-custom a:hover {
+  color: #d9fff5;
+}
