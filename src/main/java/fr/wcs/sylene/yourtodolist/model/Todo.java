@@ -1,5 +1,7 @@
 package fr.wcs.sylene.yourtodolist.model;
 
+import java.sql.Date;
+
 import javax.persistence.*;
 
 @Entity
@@ -16,6 +18,10 @@ public class Todo {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_user", nullable = false)
     AppUser user;
+
+    @Column(name = "todo_date")
+    private Date todoDate;
+
 
     public Long getId() {
         return this.id;
@@ -39,6 +45,14 @@ public class Todo {
 
     public void setUser(AppUser user) {
         this.user = user;
+
+    public Date getTodoDate() {
+        return todoDate;
+    }
+
+    public void setTodoDate(Date todoDate) {
+        this.todoDate = todoDate;
+
     }
 
 }
