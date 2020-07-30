@@ -67,7 +67,7 @@ public class TodoController {
     }
 
     @GetMapping("/delete/{id}")
-    public String deleteConfigMap(@PathVariable Long id) {
+    public String deleteTodo(@PathVariable Long id) {
 
         todoRepository.deleteById(id);
 

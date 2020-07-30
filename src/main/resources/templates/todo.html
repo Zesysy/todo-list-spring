@@ -43,19 +43,28 @@
                     <div class="card-body">
                         <form method="post" th:action="@{/todo}" th:object="${todo}">
                             <input th:value="${todo.id}" th:name="id" name="id" type="hidden">
-                            <div class="form-group ">
+                            <div class="form-group">
                                 <div class="form-row mb-3">
+                                    <label for="wizard-birthday">What day ?</label>
+                                </div>
+                                <div class="col">
+                                    <input id="wizard-birthday" name="todoDate" placeholder="1980-07-31" required
+                                        th:field="*{todoDate}" type="date">
                                     <div class="col-2 mt-2">
-                                        <label for="content">Todo</label>
-                                    </div>
-                                    <div class="col">
-                                        <input class="form-control" th:value="${todo.content}" th:name="content"
-                                            th:id="content" id="content" name="content"
-                                            placeholder="Give me a present <3" type="text">
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn button-custom float-right" id="buttonSubmit">Submit
+                            <div class="form-group">
+                                <div class="form-row mb-3">
+                                    <label for="content">What to do ?</label>
+                                </div>
+                                <div class="col">
+                                    <input class="form-control" th:value="${todo.content}" th:name="content"
+                                        th:id="content" id="content" name="content" placeholder="Give me a present <3"
+                                        type="text">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn button-custom float-right mt-3" id="buttonSubmit">Submit
                             </button>
                         </form>
                     </div>
