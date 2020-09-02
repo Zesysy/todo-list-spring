@@ -31,3 +31,9 @@
     min-width: 600px !important;
   }
 }
+
+@media (max-width: 699px) {
+  .card-size {
+    max-width: 350px !important;
+  }
+}
