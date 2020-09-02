@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    active: production
+  output.ansi.enabled: ALWAYS
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    generate-ddl: true
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://ec2-3-248-4-172.eu-west-1.compute.amazonaws.com:5432/d44531kcnkmk7s?serverTimezone=GMT
+    username: whctdnxjyqdxql
+    password: 3f8b3cee9f31ffb2f6b1c67cc411693a60f30a851ce44da4f4d8564e0c7c483b
+    driverClassName: org.postgresql.Driver

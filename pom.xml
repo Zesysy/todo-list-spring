@@ -14,7 +14,7 @@
 	<description>End of training, with the last project at WCS school, in order to mobilize the knowledge aquired during the session</description>
 
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>11</java.version>
 	</properties>
 
 	<dependencies>
