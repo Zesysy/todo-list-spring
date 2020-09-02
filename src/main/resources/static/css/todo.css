@@ -4,25 +4,30 @@
   color: #bcb6ff !important;
 }
 
-.header-custom{
-  background-color: #bcb6ff !important;
-  color: #564e58 !important;;
-}
-
-.button-custom{
+.header-custom {
   background-color: #bcb6ff !important;
   color: #564e58 !important;
 }
 
+.button-custom {
+  background-color: #bcb6ff !important;
+  color: #564e58 !important;
+}
 
-.card-body p{
+.card-body p {
   color: #bcb6ff !important;
 }
 
-.card-body  a{
+.card-body a {
   color: #bcb6ff !important;
 }
 
-.card-body  a:hover{
+.card-body a:hover {
   color: #558c8c !important;
+}
+
+@media (min-width: 699px) {
+  .card-size {
+    min-width: 600px !important;
+  }
 }
