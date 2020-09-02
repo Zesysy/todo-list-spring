@@ -1,3 +1,6 @@
-footer{
-    color: #558c8c;
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #558c8c;
 }
