@@ -1,27 +1,37 @@
 header p {
   color: #bcb6ff !important;
+  font-size: 1.6rem;
 }
 
 .breadcrumb-custom {
   background-color: #143642 !important;
   color: #bcb6ff;
+  font-size: 1.6rem;
 }
 
-.breadcrumb-custom a {
+.breadcrumb-custom a,
+input {
   background-color: #143642;
   color: #bcb6ff;
+  border: none;
 }
 
-.breadcrumb-custom a:hover {
+.breadcrumb-custom a:hover,
+input:hover {
   color: #d9fff5;
+  text-decoration: underline;
 }
 
-@media (min-width: 699px) {
+@media (max-width: 699px) {
   header p {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
   }
 
   .breadcrumb-custom {
-    font-size: 1.6rem;
+    font-size: 1rem;
+  }
+
+  .collapse-custom {
+    position: fixed !important;
   }
 }

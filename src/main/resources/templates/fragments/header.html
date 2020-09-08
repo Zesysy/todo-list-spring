@@ -1,18 +1,41 @@
 <header th:fragment="top" xmlns:th="http://www.thymeleaf.org">
-  <nav aria-label="breadcrumb">
-    <p class="ml-2 mt-2 float-left col-4">Your Todo List</p>
-    <ol class="breadcrumb float-right col-7 breadcrumb-custom">
-      <li class="breadcrumb-item breadcrumb-custom ml-auto">
-        <a href="/">Home</a>
-      </li>
-      <li class="breadcrumb-item breadcrumb-custom">
-        <a href="/todos">Your Todos </a>
-      </li>
-      <li>
-        <form th:action="@{/logout}" method="post">
-          <input type="submit" value="Logout" />
-        </form>
-      </li>
-    </ol>
+  <nav
+    aria-label="breadcrumb"
+    class="navbar navbar-expand-lg navbar-dark d-flex justify-content-between"
+  >
+    <p class="ml-2 mt-2 float-left">Your Todo List</p>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div
+      class="collapse navbar-collapse float-right collapse-custom"
+      style="@media screen {position: fixed}"
+      id="navbarNav"
+    >
+      <ol class="breadcrumb col-12 breadcrumb-custom">
+        <li class="breadcrumb-item breadcrumb-custom ml-auto">
+          <a href="/">Home</a>
+        </li>
+        <li class="breadcrumb-item breadcrumb-custom">
+          <a href="/todos">Todos</a>
+        </li>
+        <li class="breadcrumb-item breadcrumb-custom"></li>
+        <li class="breadcrumb-custom">
+          <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Logout" />
+          </form>
+        </li>
+      </ol>
+    </div>
   </nav>
 </header>
