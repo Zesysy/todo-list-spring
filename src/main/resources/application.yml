@@ -1,7 +1,10 @@
 spring:
+<<<<<<< HEAD
 
   main.allow-bean-definition-overriding: true
 
+=======
+>>>>>>> b1687a5115efb64f7dd4429ae73580c998edcd85
   output.ansi.enabled: ALWAYS
 
   datasource:

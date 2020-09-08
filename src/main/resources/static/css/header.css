@@ -1,12 +1,10 @@
-header h2 {
-  color: #bcb6ff;
-
+header p {
+  color: #bcb6ff !important;
 }
 
 .breadcrumb-custom {
   background-color: #143642 !important;
   color: #bcb6ff;
-  font-size: 1.3rem;
 }
 
 .breadcrumb-custom a {
@@ -16,4 +14,14 @@ header h2 {
 
 .breadcrumb-custom a:hover {
   color: #d9fff5;
+}
+
+@media (min-width: 699px) {
+  header p {
+    font-size: 1.6rem;
+  }
+
+  .breadcrumb-custom {
+    font-size: 1.6rem;
+  }
 }
