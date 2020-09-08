@@ -1,61 +1,125 @@
 <!DOCTYPE html>
 
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="End of training, with the last project at WCS school, in order to mobilize the knowledge aquired during the session"
+    />
+    <meta name="author" content="Sylène Manusset" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <title>Your Todo List</title>
-    <meta name="description"
-        content="End of training, with the last project at WCS school, in order to mobilize the knowledge aquired during the session">
-    <meta name="author" content="Sylène Manusset">
 
-    <link rel="shortcut icon" type="img/favicon.ico"
-        th:href="@{https://invexdesign.com/blog/wp-content/themes/invex/images/invex-v-white.png}" />
-
-    <!-- Custom CSS -->
-    <link href="../static/css/footer.css" rel="stylesheet" th:href="@{/css/footer.css}" type="text/css">
-    <link href="../static/css/header.css" rel="stylesheet" th:href="@{/css/header.css}" type="text/css">
-    <link href="../static/css/index.css" rel="stylesheet" th:href="@{/css/index.css}" type="text/css">
+    <link
+      rel="shortcut icon"
+      type="img/favicon.ico"
+      th:href="@{https://invexdesign.com/blog/wp-content/themes/invex/images/invex-v-white.png}"
+    />
 
     <!-- Bootstrap core CSS -->
-    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"
-        th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" type="text/css">
+    <link
+      href="../static/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+      th:href="@{/vendor/bootstrap/css/bootstrap.min.css}"
+    />
+
+    <!-- Custom CSS -->
+    <link
+      href="../static/css/footer.css"
+      rel="stylesheet"
+      th:href="@{/css/footer.css}"
+    />
+    <link
+      href="../static/css/header.css"
+      rel="stylesheet"
+      th:href="@{/css/header.css}"
+    />
+    <link
+      href="../static/css/index.css"
+      rel="stylesheet"
+      th:href="@{/css/index.css}"
+    />
+    <link
+      href="../static/css/todo.css"
+      rel="stylesheet"
+      th:href="@{/css/todo.css}"
+    />
+
+    <!-- Bootstrap core CSS -->
+    <link
+      href="../static/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+      th:href="@{/vendor/bootstrap/css/bootstrap.min.css}"
+    />
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-</head>
+  <body>
+    <header th:replace="fragments/header.html :: top"></header>
 
-<body>
-    <header th:replace="fragments/header.html :: top">
-    </header>
-
-    <main>
-        <form th:action="@{/login}" method="post">
-            <fieldset>
-                <div>
+    <main class="container" style="flex: 1">
+      <div class="row justify-content-center">
+        <div class="text-center card-size">
+          <h4>PLease Login</h4>
+          <div class="card my-4 card-custom">
+            <div class="card-body">
+              <form th:action="@{/login}" method="post">
+                <fieldset>
+                  <div class="form-group">
                     <label for="username">Username</label>
-                    <input type="text" id="username" name="username" placeholder="username" required="required"
-                        autofocus="autofocus" />
-                </div>
+                    <input
+                      class="form-control"
+                      type="text"
+                      id="username"
+                      name="username"
+                      required="required"
+                      autofocus="autofocus"
+                    />
+                  </div>
 
-                <div>
+                  <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="password" required="required" />
-                </div>
+                    <input
+                      class="form-control"
+                      type="password"
+                      id="password"
+                      name="password"
+                      required="required"
+                    />
+                  </div>
 
-                <div>
-                    <input type="submit" value="Log in" />
-                </div>
+                  <div>
+                    <input
+                      type="submit"
+                      class="btn button-custom float-right mt-3"
+                      id="buttonSubmit"
+                      value="Log in"
+                    />
+                  </div>
 
-                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-            </fieldset>
-        </form>
+                  <input
+                    type="hidden"
+                    name="${_csrf.parameterName}"
+                    value="${_csrf.token}"
+                  />
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-</body>
+  </body>
 
-<footer th:replace="fragments/footer.html :: bottom">
-</footer>
-
+  <footer th:replace="fragments/footer.html :: bottom"></footer>
 </html>

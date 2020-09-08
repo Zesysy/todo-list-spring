@@ -1,53 +1,83 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="End of training, with the last project at WCS school, in order to mobilize the knowledge aquired during the session"
+    />
+    <meta name="author" content="Sylène Manusset" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <title>Your Todo List</title>
-    <meta name="description"
-        content="End of training, with the last project at WCS school, in order to mobilize the knowledge aquired during the session">
-    <meta name="author" content="Sylène Manusset">
 
-    <link rel="shortcut icon" type="img/favicon.ico"
-        th:href="@{https://invexdesign.com/blog/wp-content/themes/invex/images/invex-v-white.png}" />
+    <link
+      rel="shortcut icon"
+      type="img/favicon.ico"
+      th:href="@{https://invexdesign.com/blog/wp-content/themes/invex/images/invex-v-white.png}"
+    />
 
     <!-- Custom CSS -->
-    <link href="../static/css/footer.css" rel="stylesheet" th:href="@{/css/footer.css}" type="text/css">
-    <link href="../static/css/header.css" rel="stylesheet" th:href="@{/css/header.css}" type="text/css">
-    <link href="../static/css/index.css" rel="stylesheet" th:href="@{/css/index.css}" type="text/css">
+    <link
+      href="../static/css/footer.css"
+      rel="stylesheet"
+      th:href="@{/css/footer.css}"
+      type="text/css"
+    />
+    <link
+      href="../static/css/header.css"
+      rel="stylesheet"
+      th:href="@{/css/header.css}"
+      type="text/css"
+    />
+    <link
+      href="../static/css/index.css"
+      rel="stylesheet"
+      th:href="@{/css/index.css}"
+      type="text/css"
+    />
 
     <!-- Bootstrap core CSS -->
-    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"
-        th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" type="text/css">
+    <link
+      href="../static/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+      th:href="@{/vendor/bootstrap/css/bootstrap.min.css}"
+      type="text/css"
+    />
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-
-</head>
-
-<body>
-    <header th:replace="fragments/header.html :: top">
-    </header>
+  <body>
+    <header th:replace="fragments/header.html :: top"></header>
 
     <main class="container">
-        <div class="justify-content-center">
-            <h3 class="mb-4">Error 400: bad request</h3>
-            <h3>Please enter content in your todo</h3>
-        </div>
+      <div class="justify-content-center">
+        <h3 class="mb-4">Error 400: bad request</h3>
+        <h3>Please enter content in your todo</h3>
+      </div>
     </main>
 
-    <footer th:replace="fragments/footer.html :: bottom">
-    </footer>
+    <footer th:replace="fragments/footer.html :: bottom"></footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="../static/vendor/jquery/jquery.min.js" th:src="@{/vendor/jquery/jquery.min.js}"></script>
-    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"
-        th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js }"></script>
+    <script
+      src="../static/vendor/jquery/jquery.min.js"
+      th:src="@{/vendor/jquery/jquery.min.js}"
+    ></script>
+    <script
+      src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"
+      th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js }"
+    ></script>
     <!-- Fontawsome -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-</body>
-
+  </body>
 </html>

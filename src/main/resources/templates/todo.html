@@ -3,15 +3,17 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="utf-8" />
-
-    <title>Your Todo List</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <meta
       name="description"
       content="End of training, with the last project at WCS school, in order to mobilize the knowledge aquired during the session"
     />
     <meta name="author" content="Sylène Manusset" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>Your Todo List</title>
 
     <link
       rel="shortcut icon"
@@ -81,11 +83,12 @@
                 />
                 <div class="form-group">
                   <div class="form-row mb-3">
-                    <label for="wizard-birthday">What day ?</label>
+                    <label for="todoDate">What day ?</label>
                   </div>
                   <div class="col">
                     <input
-                      id="wizard-birthday"
+                      class="form-control"
+                      id="todoDate"
                       name="todoDate"
                       placeholder="1980-07-31"
                       required
@@ -107,7 +110,7 @@
                       th:id="content"
                       id="content"
                       name="content"
-                      placeholder="Give me a present <3"
+                      placeholder="What do you want to plan ?"
                       type="text"
                     />
                   </div>
